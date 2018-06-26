@@ -8,7 +8,7 @@
 
       #forma
       {
-        width: 200px;
+        width: 150px;
         height: 150px;
         background-color: red;
         position: relative;
@@ -45,10 +45,10 @@
 
     function aparecerForma()
     {
-      var top = Math.random() * 400;
+      var  top = Math.random() * 400;
       var left = Math.random() * 400;
 
-      var width = (Math.random() * 150) + 50;
+      var width = (Math.random() * 150) + 30;
 
       var colorAleatorio = obtenerColorAleatorio();
 
@@ -62,11 +62,12 @@
       }
       document.getElementById("forma").style.display = "block";
 
-      document.getElementById("forma").style.top = top;
-      document.getElementById("forma").style.left = left;
+      document.getElementById("forma").style.top = top + "px";
+      document.getElementById("forma").style.left = left + "px";
 
-      document.getElementById("forma").style.width = width;
-      document.getElementById("forma").style.height = width;
+      document.getElementById("forma").style.width = width + "px";
+      document.getElementById("forma").style.height = width + "px";
+
 
       document.getElementById("forma").style.backgroundColor = colorAleatorio;
 
@@ -78,7 +79,7 @@
       setTimeout(aparecerForma, Math.random() * 2000);
     }
 
-    apareceFormaDespuesDe();
+      apareceFormaDespuesDe();
 
       document.getElementById("forma").onclick = function()
       {
@@ -88,8 +89,6 @@
         document.getElementById("tiempoReaccion").innerHTML = diferencia + "seg. ";
 
         apareceFormaDespuesDe();
-        mejorPuntuaje();
-        document.getElementById("mejorTiempo").innerHTML = menorTiempo + "seg. ";
       }
 
     </script>
